@@ -1,0 +1,261 @@
+Oct 18 12:15:29  [info] Creating canary table
+
+Oct 18 12:26:27  [info] $Fatal Error Details = Array
+(
+    [message] => Cannot install this extension - curl is not installed!
+    [code] => 
+)
+
+
+Oct 18 12:26:27  [info] $backTrace = #0 /var/www/html/dmg/modules/civicrm/CRM/Core/Error.php(378): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/dmg/modules/civicrm/CRM/Utils/HttpClient.php(85): CRM_Core_Error::fatal("Cannot install this extension - curl is not installed!")
+#2 /var/www/html/dmg/modules/civicrm/CRM/Extension/Browser.php(254): CRM_Utils_HttpClient->fetch("https://civicrm.org/extdir/ver=4.7.25|cms=Drupal/single", "/var/www/html/dmg/sites/default/files/civicrm/upload/cache/extensions.json.8d...")
+#3 /var/www/html/dmg/modules/civicrm/CRM/Extension/Browser.php(193): CRM_Extension_Browser->grabRemoteJson()
+#4 /var/www/html/dmg/modules/civicrm/CRM/Extension/Browser.php(148): CRM_Extension_Browser->_discoverRemote()
+#5 /var/www/html/dmg/modules/civicrm/CRM/Utils/Check/Component/Env.php(608): CRM_Extension_Browser->getExtensions()
+#6 /var/www/html/dmg/modules/civicrm/CRM/Utils/Check/Component.php(54): CRM_Utils_Check_Component_Env->checkExtensions()
+#7 /var/www/html/dmg/modules/civicrm/CRM/Utils/Check.php(209): CRM_Utils_Check_Component->checkAll()
+#8 /var/www/html/dmg/modules/civicrm/CRM/Utils/Check.php(93): CRM_Utils_Check::checkAll()
+#9 /var/www/html/dmg/modules/civicrm/CRM/Core/Page.php(218): CRM_Utils_Check->showPeriodicAlerts()
+#10 /var/www/html/dmg/modules/civicrm/CRM/Admin/Page/ConfigTaskList.php(59): CRM_Core_Page->run()
+#11 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(309): CRM_Admin_Page_ConfigTaskList->run((Array:3), NULL)
+#12 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:17))
+#13 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#14 /var/www/html/dmg/modules/civicrm/drupal/civicrm.module(448): CRM_Core_Invoke::invoke((Array:3))
+#15 /var/www/html/dmg/includes/menu.inc(527): civicrm_invoke("admin", "configtask")
+#16 /var/www/html/dmg/index.php(21): menu_execute_active_handler()
+#17 {main}
+
+
+Oct 18 12:52:45  [info] $Fatal Error Details = Array
+(
+    [message] => 
+    [code] => 
+)
+
+
+Oct 18 12:52:45  [info] $backTrace = #0 /var/www/html/dmg/modules/civicrm/CRM/Core/Error.php(378): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Cache.php(144): CRM_Core_Error::fatal()
+#2 /var/www/html/dmg/modules/civicrm/CRM/Utils/Cache/SqlGroup.php(94): CRM_Core_BAO_Cache::setItem((Array:160), "settings", "settingsMetadata_1_", NULL)
+#3 /var/www/html/dmg/modules/civicrm/Civi/Core/SettingsMetadata.php(94): CRM_Utils_Cache_SqlGroup->set("settingsMetadata_1_", (Array:160))
+#4 /var/www/html/dmg/modules/civicrm/Civi/Core/SettingsManager.php(212): Civi\Core\SettingsMetadata::getMetadata((Array:1))
+#5 /var/www/html/dmg/modules/civicrm/Civi/Core/SettingsManager.php(111): Civi\Core\SettingsManager->getDefaults("domain")
+#6 /var/www/html/dmg/modules/civicrm/CRM/Core/Config.php(125): Civi\Core\SettingsManager->useDefaults()
+#7 /var/www/html/dmg/modules/civicrm/drupal/civicrm.module(218): CRM_Core_Config::singleton()
+#8 /var/www/html/dmg/modules/civicrm/drupal/civicrm.module(382): civicrm_initialize()
+#9 /var/www/html/dmg/includes/menu.inc(527): civicrm_invoke("admin", "configtask")
+#10 /var/www/html/dmg/index.php(21): menu_execute_active_handler()
+#11 {main}
+
+
+Oct 18 12:54:12  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_menu (domain_id , path , path_arguments , title , access_callback , access_arguments , page_callback , breadcrumb , is_ssl , page_type , module_data ) VALUES ( 1 , 'civicrm/contact/view/smartgroup' , 'cid=%%cid%%' , 'Smart Groups' , 'a:2:{i:0;s:19:\"CRM_Core_Permission\";i:1;s:9:\"checkMenu\";}' , 'a:2:{i:0;a:3:{i:0;s:14:\"access CiviCRM\";i:1;s:15:\"edit my contact\";i:2;s:15:\"view my contact\";}i:1;s:2:\"or\";}' , 's:39:\"CRM_Contact_Page_View_ContactSmartGroup\";' , 'a:2:{i:0;a:2:{s:5:\"title\";s:7:\"CiviCRM\";s:3:\"url\";s:36:\"/dmg/index.php?q=civicrm&amp;reset=1\";}i:1;a:2:{s:5:\"title\";s:15:\"Contact Summary\";s:3:\"url\";s:65:\"/dmg/index.php?q=civicrm/contact/view&amp;reset=1&amp;cid=%%cid%%\";}}' ,  0 ,  0 , 'a:0:{}' )  [nativecode=1062 ** Duplicate entry 'civicrm/contact/view/smartgroup-1' for key 'UI_path_domain_id']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_menu (domain_id , path , path_arguments , title , access_callback , access_arguments , page_callback , breadcrumb , is_ssl , page_type , module_data ) VALUES ( 1 , 'civicrm/contact/view/smartgroup' , 'cid=%%cid%%' , 'Smart Groups' , 'a:2:{i:0;s:19:\"CRM_Core_Permission\";i:1;s:9:\"checkMenu\";}' , 'a:2:{i:0;a:3:{i:0;s:14:\"access CiviCRM\";i:1;s:15:\"edit my contact\";i:2;s:15:\"view my contact\";}i:1;s:2:\"or\";}' , 's:39:\"CRM_Contact_Page_View_ContactSmartGroup\";' , 'a:2:{i:0;a:2:{s:5:\"title\";s:7:\"CiviCRM\";s:3:\"url\";s:36:\"/dmg/index.php?q=civicrm&amp;reset=1\";}i:1;a:2:{s:5:\"title\";s:15:\"Contact Summary\";s:3:\"url\";s:65:\"/dmg/index.php?q=civicrm/contact/view&amp;reset=1&amp;cid=%%cid%%\";}}' ,  0 ,  0 , 'a:0:{}' )  [nativecode=1062 ** Duplicate entry 'civicrm/contact/view/smartgroup-1' for key 'UI_path_domain_id']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::handle prefix="" info="INSERT INTO civicrm_menu (domain_id , path , path_arguments , title , access_callback , access_arguments , page_callback , breadcrumb , is_ssl , page_type , module_data ) VALUES ( 1 , 'civicrm/contact/view/smartgroup' , 'cid=%%cid%%' , 'Smart Groups' , 'a:2:{i:0;s:19:\"CRM_Core_Permission\";i:1;s:9:\"checkMenu\";}' , 'a:2:{i:0;a:3:{i:0;s:14:\"access CiviCRM\";i:1;s:15:\"edit my contact\";i:2;s:15:\"view my contact\";}i:1;s:2:\"or\";}' , 's:39:\"CRM_Contact_Page_View_ContactSmartGroup\";' , 'a:2:{i:0;a:2:{s:5:\"title\";s:7:\"CiviCRM\";s:3:\"url\";s:36:\"/dmg/index.php?q=civicrm&amp;reset=1\";}i:1;a:2:{s:5:\"title\";s:15:\"Contact Summary\";s:3:\"url\";s:65:\"/dmg/index.php?q=civicrm/contact/view&amp;reset=1&amp;cid=%%cid%%\";}}' ,  0 ,  0 , 'a:0:{}' )  [nativecode=1062 ** Duplicate entry 'civicrm/contact/view/smartgroup-1' for key 'UI_path_domain_id']"]
+)
+
+
+Oct 18 12:54:12  [info] $backTrace = #0 /var/www/html/dmg/modules/civicrm/CRM/Core/Error.php(229): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::handle(Object(DB_Error))
+#2 /var/www/html/dmg/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_menu (domain_id , path , path_arguments , title , access_...")
+#3 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_menu (domain_id , path , path_arguments , title , access_...")
+#4 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_menu (domain_id , path , path_arguments , title , access_...", "DB_Error", TRUE)
+#5 /var/www/html/dmg/modules/civicrm/packages/DB/common.php(1905): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/dmg/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_menu (domain_id , path , path_arguments , title , access_...", "1062 ** Duplicate entry 'civicrm/contact/view/smartgroup-1' for key 'UI_path_...")
+#7 /var/www/html/dmg/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/dmg/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_menu (domain_id , path , path_arguments , title , access_...")
+#9 /var/www/html/dmg/modules/civicrm/packages/DB/DataObject.php(2446): DB_common->query("INSERT INTO civicrm_menu (domain_id , path , path_arguments , title , access_...")
+#10 /var/www/html/dmg/modules/civicrm/packages/DB/DataObject.php(1068): DB_DataObject->_query("INSERT INTO civicrm_menu (domain_id , path , path_arguments , title , access_...")
+#11 /var/www/html/dmg/modules/civicrm/CRM/Core/DAO.php(495): DB_DataObject->insert()
+#12 /var/www/html/dmg/modules/civicrm/CRM/Core/Menu.php(348): CRM_Core_DAO->save()
+#13 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(181): CRM_Core_Menu::store(FALSE)
+#14 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(83): CRM_Core_Invoke::getItem((Array:4))
+#15 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:4))
+#16 /var/www/html/dmg/modules/civicrm/drupal/civicrm.module(448): CRM_Core_Invoke::invoke((Array:4))
+#17 /var/www/html/dmg/includes/menu.inc(527): civicrm_invoke("admin", "setting", "smtp")
+#18 /var/www/html/dmg/index.php(21): menu_execute_active_handler()
+#19 {main}
+
+
+Oct 18 12:54:23  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => -5
+    [message] => DB Error: already exists
+    [mode] => 16
+    [debug_info] => INSERT INTO civicrm_menu (domain_id , path , title , access_callback , access_arguments , page_callback , breadcrumb , is_public , is_ssl , weight , page_type , module_data ) VALUES ( 1 , 'civicrm/profile/create' , 'CiviCRM Profile Create' , 's:1:\"1\";' , 'a:2:{i:0;a:1:{i:0;s:14:\"access CiviCRM\";}i:1;s:3:\"and\";}' , 's:23:\"CRM_Profile_Page_Router\";' , 'a:1:{i:0;a:2:{s:5:\"title\";s:7:\"CiviCRM\";s:3:\"url\";s:36:\"/dmg/index.php?q=civicrm&amp;reset=1\";}}' ,  1 ,  0 ,  0 ,  0 , 'a:0:{}' )  [nativecode=1062 ** Duplicate entry 'civicrm/profile/create-1' for key 'UI_path_domain_id']
+    [type] => DB_Error
+    [user_info] => INSERT INTO civicrm_menu (domain_id , path , title , access_callback , access_arguments , page_callback , breadcrumb , is_public , is_ssl , weight , page_type , module_data ) VALUES ( 1 , 'civicrm/profile/create' , 'CiviCRM Profile Create' , 's:1:\"1\";' , 'a:2:{i:0;a:1:{i:0;s:14:\"access CiviCRM\";}i:1;s:3:\"and\";}' , 's:23:\"CRM_Profile_Page_Router\";' , 'a:1:{i:0;a:2:{s:5:\"title\";s:7:\"CiviCRM\";s:3:\"url\";s:36:\"/dmg/index.php?q=civicrm&amp;reset=1\";}}' ,  1 ,  0 ,  0 ,  0 , 'a:0:{}' )  [nativecode=1062 ** Duplicate entry 'civicrm/profile/create-1' for key 'UI_path_domain_id']
+    [to_string] => [db_error: message="DB Error: already exists" code=-5 mode=callback callback=CRM_Core_Error::handle prefix="" info="INSERT INTO civicrm_menu (domain_id , path , title , access_callback , access_arguments , page_callback , breadcrumb , is_public , is_ssl , weight , page_type , module_data ) VALUES ( 1 , 'civicrm/profile/create' , 'CiviCRM Profile Create' , 's:1:\"1\";' , 'a:2:{i:0;a:1:{i:0;s:14:\"access CiviCRM\";}i:1;s:3:\"and\";}' , 's:23:\"CRM_Profile_Page_Router\";' , 'a:1:{i:0;a:2:{s:5:\"title\";s:7:\"CiviCRM\";s:3:\"url\";s:36:\"/dmg/index.php?q=civicrm&amp;reset=1\";}}' ,  1 ,  0 ,  0 ,  0 , 'a:0:{}' )  [nativecode=1062 ** Duplicate entry 'civicrm/profile/create-1' for key 'UI_path_domain_id']"]
+)
+
+
+Oct 18 12:54:23  [info] $backTrace = #0 /var/www/html/dmg/modules/civicrm/CRM/Core/Error.php(229): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::handle(Object(DB_Error))
+#2 /var/www/html/dmg/modules/civicrm/packages/DB.php(985): PEAR_Error->__construct("DB Error: already exists", -5, 16, (Array:2), "INSERT INTO civicrm_menu (domain_id , path , title , access_callback , access...")
+#3 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(575): DB_Error->__construct(-5, 16, (Array:2), "INSERT INTO civicrm_menu (domain_id , path , title , access_callback , access...")
+#4 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(DB_mysqli), NULL, -5, 16, (Array:2), "INSERT INTO civicrm_menu (domain_id , path , title , access_callback , access...", "DB_Error", TRUE)
+#5 /var/www/html/dmg/modules/civicrm/packages/DB/common.php(1905): PEAR->__call("raiseError", (Array:7))
+#6 /var/www/html/dmg/modules/civicrm/packages/DB/mysqli.php(933): DB_common->raiseError(-5, NULL, NULL, "INSERT INTO civicrm_menu (domain_id , path , title , access_callback , access...", "1062 ** Duplicate entry 'civicrm/profile/create-1' for key 'UI_path_domain_id'")
+#7 /var/www/html/dmg/modules/civicrm/packages/DB/mysqli.php(403): DB_mysqli->mysqliRaiseError()
+#8 /var/www/html/dmg/modules/civicrm/packages/DB/common.php(1216): DB_mysqli->simpleQuery("INSERT INTO civicrm_menu (domain_id , path , title , access_callback , access...")
+#9 /var/www/html/dmg/modules/civicrm/packages/DB/DataObject.php(2446): DB_common->query("INSERT INTO civicrm_menu (domain_id , path , title , access_callback , access...")
+#10 /var/www/html/dmg/modules/civicrm/packages/DB/DataObject.php(1068): DB_DataObject->_query("INSERT INTO civicrm_menu (domain_id , path , title , access_callback , access...")
+#11 /var/www/html/dmg/modules/civicrm/CRM/Core/DAO.php(495): DB_DataObject->insert()
+#12 /var/www/html/dmg/modules/civicrm/CRM/Core/Menu.php(348): CRM_Core_DAO->save()
+#13 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(181): CRM_Core_Menu::store(FALSE)
+#14 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(83): CRM_Core_Invoke::getItem((Array:4))
+#15 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:4))
+#16 /var/www/html/dmg/modules/civicrm/drupal/civicrm.module(448): CRM_Core_Invoke::invoke((Array:4))
+#17 /var/www/html/dmg/includes/menu.inc(527): civicrm_invoke("admin", "setting", "search")
+#18 /var/www/html/dmg/index.php(21): menu_execute_active_handler()
+#19 {main}
+
+
+Oct 19 04:12:54  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 0
+    [message] => php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution" code=0 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Oct 19 04:12:54  [info] $backTrace = #0 /var/www/html/dmg/modules/civicrm/CRM/Core/Error.php(229): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(577): PEAR_Error->__construct("php_network_getaddresses: getaddrinfo failed: Temporary failure in name resol...", 0, 16, (Array:2), NULL)
+#3 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(Net_Socket), "php_network_getaddresses: getaddrinfo failed: Temporary failure in name resol...", 0)
+#4 /var/www/html/dmg/modules/civicrm/vendor/pear/net_socket/Net/Socket.php(173): PEAR->__call("raiseError", (Array:2))
+#5 /var/www/html/dmg/modules/civicrm/packages/HTTP/Request.php(737): Net_Socket->connect("ssl://maps.googleapis.com", 443, NULL, "60", NULL)
+#6 /var/www/html/dmg/modules/civicrm/CRM/Utils/Geocode/Google.php(126): HTTP_Request->sendRequest()
+#7 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Address.php(387): CRM_Utils_Geocode_Google::format((Array:12))
+#8 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Address.php(144): CRM_Core_BAO_Address::fixAddress((Array:12))
+#9 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Address.php(120): CRM_Core_BAO_Address::add((Array:12), TRUE)
+#10 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Location.php(69): CRM_Core_BAO_Address::create((Array:10), TRUE, NULL)
+#11 /var/www/html/dmg/modules/civicrm/CRM/Contact/BAO/Contact.php(343): CRM_Core_BAO_Location::create((Array:10), TRUE)
+#12 /var/www/html/dmg/modules/civicrm/CRM/Contact/BAO/Contact.php(1893): CRM_Contact_BAO_Contact::create((Array:10))
+#13 /var/www/html/dmg/modules/civicrm/CRM/Profile/Form.php(1283): CRM_Contact_BAO_Contact::createProfileContact((Array:11), (Array:7), 203, NULL, NULL, "Individual", TRUE)
+#14 /var/www/html/dmg/modules/civicrm/CRM/Profile/Form/Dynamic.php(117): CRM_Profile_Form->postProcess()
+#15 /var/www/html/dmg/modules/civicrm/CRM/Core/Form.php(447): CRM_Profile_Form_Dynamic->postProcess()
+#16 /var/www/html/dmg/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(169): CRM_Core_Form->mainProcess()
+#17 /var/www/html/dmg/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(136): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Profile_Form_Dynamic), "upload")
+#18 /var/www/html/dmg/modules/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Profile_Form_Dynamic), "upload")
+#19 /var/www/html/dmg/modules/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Profile_Form_Dynamic), "upload")
+#20 /var/www/html/dmg/modules/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("upload")
+#21 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/UFGroup.php(860): CRM_Core_Controller->run()
+#22 /var/www/html/dmg/modules/civicrm/drupal/civicrm.module(534): CRM_Core_BAO_UFGroup::getEditHTML(203, "", 2, TRUE, FALSE, NULL, FALSE, "Individual")
+#23 /var/www/html/dmg/modules/civicrm/drupal/civicrm_user.inc(77): civicrm_register_data((Array:23), Object(stdClass), "account", FALSE)
+#24 /var/www/html/dmg/modules/user/user.module(101): civicrm_user_insert((Array:23), Object(stdClass), "account")
+#25 /var/www/html/dmg/modules/user/user.module(592): user_module_invoke("insert", (Array:23), Object(stdClass), "account")
+#26 /var/www/html/dmg/modules/user/user.module(3918): user_save(Object(stdClass), (Array:23))
+#27 /var/www/html/dmg/includes/form.inc(1520): user_register_submit((Array:33), (Array:21))
+#28 /var/www/html/dmg/includes/form.inc(904): form_execute_handlers("submit", (Array:33), (Array:21))
+#29 /var/www/html/dmg/includes/form.inc(386): drupal_process_form("user_register_form", (Array:33), (Array:21))
+#30 /var/www/html/dmg/includes/form.inc(131): drupal_build_form("user_register_form", (Array:21))
+#31 /var/www/html/dmg/includes/menu.inc(527): drupal_get_form("user_register_form")
+#32 /var/www/html/dmg/index.php(21): menu_execute_active_handler()
+#33 {main}
+
+
+Oct 19 04:15:08  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 0
+    [message] => php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution" code=0 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Oct 19 04:15:08  [info] $backTrace = #0 /var/www/html/dmg/modules/civicrm/CRM/Core/Error.php(229): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(577): PEAR_Error->__construct("php_network_getaddresses: getaddrinfo failed: Temporary failure in name resol...", 0, 16, (Array:2), NULL)
+#3 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(Net_Socket), "php_network_getaddresses: getaddrinfo failed: Temporary failure in name resol...", 0)
+#4 /var/www/html/dmg/modules/civicrm/vendor/pear/net_socket/Net/Socket.php(173): PEAR->__call("raiseError", (Array:2))
+#5 /var/www/html/dmg/modules/civicrm/packages/HTTP/Request.php(737): Net_Socket->connect("ssl://maps.googleapis.com", 443, NULL, "60", NULL)
+#6 /var/www/html/dmg/modules/civicrm/CRM/Utils/Geocode/Google.php(126): HTTP_Request->sendRequest()
+#7 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Address.php(387): CRM_Utils_Geocode_Google::format((Array:12))
+#8 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Address.php(144): CRM_Core_BAO_Address::fixAddress((Array:12))
+#9 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Address.php(120): CRM_Core_BAO_Address::add((Array:12), TRUE)
+#10 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Location.php(69): CRM_Core_BAO_Address::create((Array:10), TRUE, NULL)
+#11 /var/www/html/dmg/modules/civicrm/CRM/Contact/BAO/Contact.php(343): CRM_Core_BAO_Location::create((Array:10), TRUE)
+#12 /var/www/html/dmg/modules/civicrm/CRM/Contact/BAO/Contact.php(1893): CRM_Contact_BAO_Contact::create((Array:10))
+#13 /var/www/html/dmg/modules/civicrm/CRM/Profile/Form.php(1283): CRM_Contact_BAO_Contact::createProfileContact((Array:11), (Array:7), 204, NULL, NULL, "Individual", TRUE)
+#14 /var/www/html/dmg/modules/civicrm/CRM/Profile/Form/Dynamic.php(117): CRM_Profile_Form->postProcess()
+#15 /var/www/html/dmg/modules/civicrm/CRM/Core/Form.php(447): CRM_Profile_Form_Dynamic->postProcess()
+#16 /var/www/html/dmg/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(169): CRM_Core_Form->mainProcess()
+#17 /var/www/html/dmg/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(136): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Profile_Form_Dynamic), "upload")
+#18 /var/www/html/dmg/modules/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Profile_Form_Dynamic), "upload")
+#19 /var/www/html/dmg/modules/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Profile_Form_Dynamic), "upload")
+#20 /var/www/html/dmg/modules/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("upload")
+#21 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/UFGroup.php(860): CRM_Core_Controller->run()
+#22 /var/www/html/dmg/modules/civicrm/drupal/civicrm.module(534): CRM_Core_BAO_UFGroup::getEditHTML(204, "", 2, TRUE, FALSE, NULL, FALSE, "Individual")
+#23 /var/www/html/dmg/modules/civicrm/drupal/civicrm_user.inc(77): civicrm_register_data((Array:23), Object(stdClass), "account", FALSE)
+#24 /var/www/html/dmg/modules/user/user.module(101): civicrm_user_insert((Array:23), Object(stdClass), "account")
+#25 /var/www/html/dmg/modules/user/user.module(592): user_module_invoke("insert", (Array:23), Object(stdClass), "account")
+#26 /var/www/html/dmg/modules/user/user.module(3918): user_save(Object(stdClass), (Array:23))
+#27 /var/www/html/dmg/includes/form.inc(1520): user_register_submit((Array:33), (Array:21))
+#28 /var/www/html/dmg/includes/form.inc(904): form_execute_handlers("submit", (Array:33), (Array:21))
+#29 /var/www/html/dmg/includes/form.inc(386): drupal_process_form("user_register_form", (Array:33), (Array:21))
+#30 /var/www/html/dmg/includes/form.inc(131): drupal_build_form("user_register_form", (Array:21))
+#31 /var/www/html/dmg/includes/menu.inc(527): drupal_get_form("user_register_form")
+#32 /var/www/html/dmg/index.php(21): menu_execute_active_handler()
+#33 {main}
+
+
+Oct 19 04:15:35  [info] $Fatal Error Details = Array
+(
+    [message] => We can't load the requested web page. This page requires cookies to be enabled in your browser settings. Please check this setting and enable cookies (if they are not enabled). Then try again. If this error persists, contact the site administrator for assistance.&lt;br /&gt;&lt;br /&gt;Site Administrators: This error may indicate that users are accessing this page using a domain or URL other than the configured Base URL. EXAMPLE: Base URL is http://example.org, but some users are accessing the page via http://www.example.org or a domain alias like http://myotherexample.org.&lt;br /&gt;&lt;br /&gt;Error type: Could not find a valid session key.
+    [code] => 
+)
+
+
+Oct 19 04:15:35  [info] $backTrace = #0 /var/www/html/dmg/modules/civicrm/CRM/Core/Error.php(378): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/dmg/modules/civicrm/CRM/Core/Controller.php(833): CRM_Core_Error::fatal("We can't load the requested web page. This page requires cookies to be enable...")
+#2 /var/www/html/dmg/modules/civicrm/CRM/Core/Controller.php(828): CRM_Core_Controller->invalidKeyCommon()
+#3 /var/www/html/dmg/modules/civicrm/CRM/Core/Controller.php(312): CRM_Core_Controller->invalidKey()
+#4 /var/www/html/dmg/modules/civicrm/CRM/Core/Controller.php(204): CRM_Core_Controller->key("CRM_Member_Form_Search", TRUE, FALSE)
+#5 /var/www/html/dmg/modules/civicrm/CRM/Core/Controller/Simple.php(66): CRM_Core_Controller->__construct("Member", TRUE, NULL, "CRM_Member_Form_Search", TRUE, FALSE)
+#6 /var/www/html/dmg/modules/civicrm/CRM/Member/Page/DashBoard.php(449): CRM_Core_Controller_Simple->__construct("CRM_Member_Form_Search", "Member", NULL)
+#7 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(309): CRM_Member_Page_DashBoard->run((Array:2), NULL)
+#8 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:15))
+#9 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:2))
+#10 /var/www/html/dmg/modules/civicrm/drupal/civicrm.module(448): CRM_Core_Invoke::invoke((Array:2))
+#11 /var/www/html/dmg/includes/menu.inc(527): civicrm_invoke("member")
+#12 /var/www/html/dmg/index.php(21): menu_execute_active_handler()
+#13 {main}
+
+
