@@ -308,3 +308,210 @@ Oct 19 09:54:04  [info] $backTrace = #0 /var/www/html/dmg/modules/civicrm/CRM/Co
 #28 {main}
 
 
+Oct 19 14:52:56  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 0
+    [message] => php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution" code=0 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Oct 19 14:52:56  [info] $backTrace = #0 /var/www/html/dmg/modules/civicrm/CRM/Core/Error.php(229): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(577): PEAR_Error->__construct("php_network_getaddresses: getaddrinfo failed: Temporary failure in name resol...", 0, 16, (Array:2), NULL)
+#3 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(Net_Socket), "php_network_getaddresses: getaddrinfo failed: Temporary failure in name resol...", 0)
+#4 /var/www/html/dmg/modules/civicrm/vendor/pear/net_socket/Net/Socket.php(173): PEAR->__call("raiseError", (Array:2))
+#5 /var/www/html/dmg/modules/civicrm/packages/HTTP/Request.php(737): Net_Socket->connect("ssl://maps.googleapis.com", 443, NULL, "60", NULL)
+#6 /var/www/html/dmg/modules/civicrm/CRM/Utils/Geocode/Google.php(126): HTTP_Request->sendRequest()
+#7 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Address.php(387): CRM_Utils_Geocode_Google::format((Array:12))
+#8 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Address.php(144): CRM_Core_BAO_Address::fixAddress((Array:12))
+#9 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Address.php(120): CRM_Core_BAO_Address::add((Array:12), TRUE)
+#10 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Location.php(69): CRM_Core_BAO_Address::create((Array:12), TRUE, NULL)
+#11 /var/www/html/dmg/modules/civicrm/CRM/Contact/BAO/Contact.php(343): CRM_Core_BAO_Location::create((Array:12), TRUE)
+#12 /var/www/html/dmg/modules/civicrm/CRM/Contact/BAO/Contact.php(1893): CRM_Contact_BAO_Contact::create((Array:12))
+#13 /var/www/html/dmg/modules/civicrm/CRM/Profile/Form.php(1283): CRM_Contact_BAO_Contact::createProfileContact((Array:13), (Array:7), 202, NULL, "1", NULL, TRUE)
+#14 /var/www/html/dmg/modules/civicrm/CRM/Profile/Form/Dynamic.php(117): CRM_Profile_Form->postProcess()
+#15 /var/www/html/dmg/modules/civicrm/CRM/Core/Form.php(447): CRM_Profile_Form_Dynamic->postProcess()
+#16 /var/www/html/dmg/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(169): CRM_Core_Form->mainProcess()
+#17 /var/www/html/dmg/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(136): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Profile_Form_Dynamic), "upload")
+#18 /var/www/html/dmg/modules/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Profile_Form_Dynamic), "upload")
+#19 /var/www/html/dmg/modules/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Profile_Form_Dynamic), "upload")
+#20 /var/www/html/dmg/modules/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("upload")
+#21 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/UFGroup.php(920): CRM_Core_Controller->run()
+#22 /var/www/html/dmg/modules/civicrm/drupal/civicrm.module(604): CRM_Core_BAO_UFGroup::getEditHTML(202, "name_and_address", NULL, FALSE, TRUE, 1, FALSE, "Individual")
+#23 /var/www/html/dmg/modules/civicrm/drupal/civicrm.module(898): civicrm_form_data((Array:19), Object(stdClass), "name_and_address", TRUE)
+#24 /var/www/html/dmg/includes/module.inc(1163): civicrm_form_alter((Array:19), (Array:15), "user_profile_form", NULL)
+#25 /var/www/html/dmg/includes/form.inc(1129): drupal_alter("form", (Array:19), (Array:15), "user_profile_form")
+#26 /var/www/html/dmg/includes/form.inc(352): drupal_prepare_form("user_profile_form", (Array:19), (Array:15))
+#27 /var/www/html/dmg/includes/form.inc(131): drupal_build_form("user_profile_form", (Array:15))
+#28 /var/www/html/dmg/includes/menu.inc(527): drupal_get_form("user_profile_form", Object(stdClass), "name_and_address")
+#29 /var/www/html/dmg/index.php(21): menu_execute_active_handler()
+#30 {main}
+
+
+Oct 21 02:23:14  [warning] Deprecated function, use CRM_Core_PseudoConstant::getKey
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Oct 21 02:23:17  [warning] Deprecated function, use CRM_Core_PseudoConstant::getKey
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Oct 21 02:28:45  [warning] Deprecated function, use CRM_Core_PseudoConstant::getKey
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Oct 21 03:37:55  [info] Ignoring exception thrown by nullHandler: , mail() returned failure
+
+Oct 21 03:37:55  [info] $backTrace = #0 /var/www/html/dmg/modules/civicrm/CRM/Core/Error.php(959): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::nullHandler(Object(PEAR_Error))
+#2 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(577): PEAR_Error->__construct("mail() returned failure", NULL, 16, (Array:2), NULL)
+#3 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(236): PEAR::_raiseError(NULL, "mail() returned failure")
+#4 /var/www/html/dmg/modules/civicrm/packages/Mail/mail.php(175): PEAR::__callStatic("raiseError", (Array:1))
+#5 /var/www/html/dmg/modules/civicrm/CRM/Utils/Mail.php(292): Mail_mail->send("habibhrp2640@gmail.com", (Array:9), "--=_c15ff1666a202d1728bccfd94da79d95\nContent-Transfer-Encoding: 8bit\nConten...")
+#6 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/MessageTemplate.php(564): CRM_Utils_Mail::send((Array:17))
+#7 /var/www/html/dmg/modules/civicrm/CRM/Event/Form/Participant.php(1734): CRM_Core_BAO_MessageTemplate::sendTemplate((Array:17))
+#8 /var/www/html/dmg/modules/civicrm/CRM/Event/Form/Participant.php(934): CRM_Event_Form_Participant->submit((Array:36))
+#9 /var/www/html/dmg/modules/civicrm/CRM/Core/Form.php(447): CRM_Event_Form_Participant->postProcess()
+#10 /var/www/html/dmg/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(169): CRM_Core_Form->mainProcess()
+#11 /var/www/html/dmg/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(136): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Event_Form_Participant), "upload")
+#12 /var/www/html/dmg/modules/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Event_Form_Participant), "upload")
+#13 /var/www/html/dmg/modules/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Event_Form_Participant), "upload")
+#14 /var/www/html/dmg/modules/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("upload")
+#15 /var/www/html/dmg/modules/civicrm/CRM/Event/Page/Tab.php(118): CRM_Core_Controller->run()
+#16 /var/www/html/dmg/modules/civicrm/CRM/Event/Page/Tab.php(175): CRM_Event_Page_Tab->edit()
+#17 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(309): CRM_Event_Page_Tab->run((Array:3), NULL)
+#18 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:15))
+#19 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#20 /var/www/html/dmg/modules/civicrm/drupal/civicrm.module(448): CRM_Core_Invoke::invoke((Array:3))
+#21 /var/www/html/dmg/includes/menu.inc(527): civicrm_invoke("participant", "add")
+#22 /var/www/html/dmg/index.php(21): menu_execute_active_handler()
+#23 {main}
+
+
+Oct 21 03:50:13  [warning] Deprecated function, use CRM_Core_PseudoConstant::getKey
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Oct 21 03:53:11  [warning] Deprecated function, use CRM_Core_PseudoConstant::getKey
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Oct 21 03:53:22  [warning] Deprecated function, use CRM_Core_PseudoConstant::getKey
+Array
+(
+    [civi.tag] => deprecated
+)
+
+
+Oct 21 03:59:32  [info] $Fatal Error Details = Array
+(
+    [callback] => Array
+        (
+            [0] => CRM_Core_Error
+            [1] => handle
+        )
+
+    [code] => 0
+    [message] => php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution
+    [mode] => 16
+    [debug_info] => 
+    [type] => PEAR_Error
+    [user_info] => 
+    [to_string] => [pear_error: message="php_network_getaddresses: getaddrinfo failed: Temporary failure in name resolution" code=0 mode=callback callback=CRM_Core_Error::handle prefix="" info=""]
+)
+
+
+Oct 21 03:59:32  [info] $backTrace = #0 /var/www/html/dmg/modules/civicrm/CRM/Core/Error.php(229): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(921): CRM_Core_Error::handle(Object(PEAR_Error))
+#2 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(577): PEAR_Error->__construct("php_network_getaddresses: getaddrinfo failed: Temporary failure in name resol...", 0, 16, (Array:2), NULL)
+#3 /var/www/html/dmg/modules/civicrm/packages/PEAR.php(223): PEAR->_raiseError(Object(Net_Socket), "php_network_getaddresses: getaddrinfo failed: Temporary failure in name resol...", 0)
+#4 /var/www/html/dmg/modules/civicrm/vendor/pear/net_socket/Net/Socket.php(173): PEAR->__call("raiseError", (Array:2))
+#5 /var/www/html/dmg/modules/civicrm/packages/HTTP/Request.php(737): Net_Socket->connect("ssl://maps.googleapis.com", 443, NULL, "60", NULL)
+#6 /var/www/html/dmg/modules/civicrm/CRM/Utils/Geocode/Google.php(126): HTTP_Request->sendRequest()
+#7 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Address.php(387): CRM_Utils_Geocode_Google::format((Array:15))
+#8 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Address.php(144): CRM_Core_BAO_Address::fixAddress((Array:15))
+#9 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Address.php(120): CRM_Core_BAO_Address::add((Array:15), TRUE)
+#10 /var/www/html/dmg/modules/civicrm/CRM/Core/BAO/Location.php(69): CRM_Core_BAO_Address::create((Array:15), TRUE, "event")
+#11 /var/www/html/dmg/modules/civicrm/CRM/Event/Form/ManageEvent/Location.php(263): CRM_Core_BAO_Location::create((Array:15), TRUE, "event")
+#12 /var/www/html/dmg/modules/civicrm/CRM/Core/Form.php(447): CRM_Event_Form_ManageEvent_Location->postProcess()
+#13 /var/www/html/dmg/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(169): CRM_Core_Form->mainProcess()
+#14 /var/www/html/dmg/modules/civicrm/CRM/Core/QuickForm/Action/Upload.php(136): CRM_Core_QuickForm_Action_Upload->realPerform(Object(CRM_Event_Form_ManageEvent_Location), "upload")
+#15 /var/www/html/dmg/modules/civicrm/packages/HTML/QuickForm/Controller.php(203): CRM_Core_QuickForm_Action_Upload->perform(Object(CRM_Event_Form_ManageEvent_Location), "upload")
+#16 /var/www/html/dmg/modules/civicrm/packages/HTML/QuickForm/Page.php(103): HTML_QuickForm_Controller->handle(Object(CRM_Event_Form_ManageEvent_Location), "upload")
+#17 /var/www/html/dmg/modules/civicrm/CRM/Core/Controller.php(351): HTML_QuickForm_Page->handle("upload")
+#18 /var/www/html/dmg/modules/civicrm/CRM/Utils/Wrapper.php(113): CRM_Core_Controller->run()
+#19 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(282): CRM_Utils_Wrapper->run("CRM_Event_Form_ManageEvent_Location", "Event Location", (Array:0))
+#20 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:14))
+#21 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:4))
+#22 /var/www/html/dmg/modules/civicrm/drupal/civicrm.module(448): CRM_Core_Invoke::invoke((Array:4))
+#23 /var/www/html/dmg/includes/menu.inc(527): civicrm_invoke("event", "manage", "location")
+#24 /var/www/html/dmg/index.php(21): menu_execute_active_handler()
+#25 {main}
+
+
+Oct 21 04:19:02  [info] $Fatal Error Details = Array
+(
+    [message] => Could not find valid value for id
+    [code] => 
+)
+
+
+Oct 21 04:19:02  [info] $backTrace = #0 /var/www/html/dmg/modules/civicrm/CRM/Core/Error.php(378): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/dmg/modules/civicrm/CRM/Utils/Request.php(120): CRM_Core_Error::fatal("Could not find valid value for id")
+#2 /var/www/html/dmg/modules/civicrm/CRM/Event/StateMachine/Registration.php(52): CRM_Utils_Request::retrieve("id", "Positive", Object(CRM_Event_Controller_Registration), TRUE)
+#3 /var/www/html/dmg/modules/civicrm/CRM/Event/Controller/Registration.php(47): CRM_Event_StateMachine_Registration->__construct(Object(CRM_Event_Controller_Registration), TRUE)
+#4 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(304): CRM_Event_Controller_Registration->__construct("Event Registration", TRUE, "null", NULL, "false")
+#5 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:15))
+#6 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#7 /var/www/html/dmg/modules/civicrm/drupal/civicrm.module(448): CRM_Core_Invoke::invoke((Array:3))
+#8 /var/www/html/dmg/includes/menu.inc(527): civicrm_invoke("event", "register")
+#9 /var/www/html/dmg/index.php(21): menu_execute_active_handler()
+#10 {main}
+
+
+Oct 21 12:39:27  [info] $Fatal Error Details = Array
+(
+    [message] => Could not find valid value for id
+    [code] => 
+)
+
+
+Oct 21 12:39:27  [info] $backTrace = #0 /var/www/html/dmg/modules/civicrm/CRM/Core/Error.php(378): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /var/www/html/dmg/modules/civicrm/CRM/Utils/Request.php(120): CRM_Core_Error::fatal("Could not find valid value for id")
+#2 /var/www/html/dmg/modules/civicrm/CRM/Event/StateMachine/Registration.php(52): CRM_Utils_Request::retrieve("id", "Positive", Object(CRM_Event_Controller_Registration), TRUE)
+#3 /var/www/html/dmg/modules/civicrm/CRM/Event/Controller/Registration.php(47): CRM_Event_StateMachine_Registration->__construct(Object(CRM_Event_Controller_Registration), TRUE)
+#4 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(304): CRM_Event_Controller_Registration->__construct("Event Registration", TRUE, "null", NULL, "false")
+#5 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(84): CRM_Core_Invoke::runItem((Array:15))
+#6 /var/www/html/dmg/modules/civicrm/CRM/Core/Invoke.php(52): CRM_Core_Invoke::_invoke((Array:3))
+#7 /var/www/html/dmg/modules/civicrm/drupal/civicrm.module(448): CRM_Core_Invoke::invoke((Array:3))
+#8 /var/www/html/dmg/includes/menu.inc(527): civicrm_invoke("event", "register")
+#9 /var/www/html/dmg/index.php(21): menu_execute_active_handler()
+#10 {main}
+
+

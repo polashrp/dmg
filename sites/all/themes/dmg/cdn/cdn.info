@@ -20,8 +20,20 @@ regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
 
 
+
+
+
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
 stylesheets[all][] = css/style.css
+
+
+
+stylesheets[all][] = css/bootstrap_3_3.7.min.css
+
+;stylesheets[all][] = css/bootstrap.css
+scripts[] = js/bootstrap.min.js
+
+
