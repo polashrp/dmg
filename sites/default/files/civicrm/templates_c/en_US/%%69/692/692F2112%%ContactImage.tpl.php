@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.27, created on 2017-10-19 14:40:24
+<?php /* Smarty version 2.6.27, created on 2017-10-22 10:25:53
          compiled from CRM/Contact/Page/ContactImage.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'crmScope', 'CRM/Contact/Page/ContactImage.tpl', 1, false),)), $this); ?>

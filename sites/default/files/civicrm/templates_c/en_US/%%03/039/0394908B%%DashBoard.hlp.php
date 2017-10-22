@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.27, created on 2017-10-19 14:40:17
+<?php /* Smarty version 2.6.27, created on 2017-10-22 05:49:33
          compiled from CRM/Member/Page/DashBoard.hlp */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'crmScope', 'CRM/Member/Page/DashBoard.hlp', 1, false),array('block', 'htxt', 'CRM/Member/Page/DashBoard.hlp', 26, false),array('block', 'ts', 'CRM/Member/Page/DashBoard.hlp', 27, false),array('function', 'crmURL', 'CRM/Member/Page/DashBoard.hlp', 30, false),array('function', 'docURL', 'CRM/Member/Page/DashBoard.hlp', 37, false),)), $this); ?>

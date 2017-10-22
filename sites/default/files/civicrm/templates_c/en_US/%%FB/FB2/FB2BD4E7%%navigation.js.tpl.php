@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.27, created on 2017-10-19 10:14:09
+<?php /* Smarty version 2.6.27, created on 2017-10-22 05:48:51
          compiled from CRM/common/navigation.js.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'crmScope', 'CRM/common/navigation.js.tpl', 1, false),array('block', 'ts', 'CRM/common/navigation.js.tpl', 31, false),array('function', 'crmURL', 'CRM/common/navigation.js.tpl', 29, false),array('modifier', 'date_format', 'CRM/common/navigation.js.tpl', 54, false),array('modifier', 'json_encode', 'CRM/common/navigation.js.tpl', 57, false),)), $this); ?>

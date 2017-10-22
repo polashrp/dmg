@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.27, created on 2017-10-19 10:14:05
+<?php /* Smarty version 2.6.27, created on 2017-10-22 04:01:50
          compiled from CRM/common/drupal.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('block', 'crmScope', 'CRM/common/drupal.tpl', 1, false),array('block', 'ts', 'CRM/common/drupal.tpl', 38, false),array('block', 'crmRegion', 'CRM/common/drupal.tpl', 51, false),array('modifier', 'truncate', 'CRM/common/drupal.tpl', 30, false),array('function', 'crmNavigationMenu', 'CRM/common/drupal.tpl', 33, false),)), $this); ?>
