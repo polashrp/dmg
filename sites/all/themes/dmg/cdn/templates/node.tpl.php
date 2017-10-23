@@ -79,7 +79,9 @@
  * @ingroup templates
  */
 ?>
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+
+<div class="col-md-04">
+<article id="node-<?php print $node->nid; ?> hrp" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php
     // Hide comments, tags, and links now so that we can render them later.
     hide($content['comments']);
@@ -91,7 +93,7 @@
   <header>
     <?php print render($title_prefix); ?>
     <?php if (!$page && !empty($title)): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+    <h4<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h4>
     <?php endif; ?>
     <?php print render($title_suffix); ?>
     <?php if ($display_submitted): ?>
@@ -116,3 +118,4 @@
   <?php endif; ?>
   <?php print render($content['comments']); ?>
 </article>
+</div>
